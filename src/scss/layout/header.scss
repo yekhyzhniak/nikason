@@ -3,15 +3,23 @@
     position: relative;
     &__container{
         @include m-phone{
-            margin-top: 15px;
+            // padding-top: 100px;
         }
     }
     &__content{
+        position: relative;
         display: flex;
         height: 140px;
         @include m-phone{
             flex-direction: column-reverse;
             height: 100%;
+            padding: 80px 0 0 20px;
+            width: 80%;
+            margin: 0 auto;
+            border-left: 2px solid #000;
+            height: 100vh;
+            margin-right: -100%;
+            transition: right 0.4s, ease;
         }
     }
     &__lists{
@@ -22,7 +30,8 @@
         align-items: center;
         @include m-phone{
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
+            justify-content: flex-start;
         }
     }
     &__list{
@@ -72,7 +81,26 @@
             width: 130px;
         }
     }
-    &__symbols{
+    // &__symbols{
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     margin-right: -50%;
+    //     transform: translate(-50%, -50%);
+    //     @include m-phone{
+    //         position: relative;
+    //         top: 0;
+    //         left: 0;
+    //         margin-right: 0;
+    //         transform: translate(0, 0);
+    //         display: flex;
+    //         justify-content: space-between;
+    //         align-items: center;
+    //         width: 100%;
+    //         margin-bottom: 50px;
+    //     }
+    // }
+    &__logo{
         position: absolute;
         top: 50%;
         left: 50%;
@@ -80,18 +108,17 @@
         transform: translate(-50%, -50%);
         @include m-phone{
             position: relative;
+            display: flex;
             top: 0;
             left: 0;
             margin-right: 0;
             transform: translate(0, 0);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            margin-bottom: 50px;
+            justify-content: flex-start;
+            margin-bottom: 30px;
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
         }
-    }
-    &__logo{
         &-pic{
             object-fit: cover;
         }
@@ -99,7 +126,24 @@
 
 }
 
+.menu__bg{
+    display: none;
+    @include m-phone{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #fff;
+        border: 1px solid #57463A;
+        position: absolute;
+        top: 15px;
+        right: 15px;
 
+        // cursor: pointer;
+    }
+}
 
 
 
@@ -107,10 +151,10 @@
 	width: 36px;
 	height: 31px;
 	padding: 5px;
-	margin-top: -5px;
-	margin-left: -5px;
-	align-items: center;
-	justify-content: center;
+	// margin-top: -5px;
+	// margin-left: -5px;
+	// align-items: center;
+	// justify-content: center;
 	cursor: pointer;
 	display: none;
     z-index: 10;
@@ -161,4 +205,13 @@
 			}
 		}
 	}
+}
+
+.show{
+    margin: 0 auto;
+}
+
+.active-link{
+    color: #57463A;
+    border-bottom: 2px solid #57463A;
 }

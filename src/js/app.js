@@ -7,12 +7,12 @@
 Если мы хотим добавить модуль следует его расскоментировать
 */
 import {
-  isWebp,
-  headerFixed,
-  togglePopupWindows,
-  addTouchClass,
-  addLoadedClass,
-  menuInit,
+    isWebp,
+    headerFixed,
+    togglePopupWindows,
+    addTouchClass,
+    addLoadedClass,
+    menuInit,
 } from './modules'
 /* Раскомментировать для использования */
 // import { MousePRLX } from './libs/parallaxMouse'
@@ -65,3 +65,9 @@ isWebp()
 /* Раскомментировать для использования */
 // togglePopupWindows()
 // =======================================================================================================
+
+document.querySelector('.js-menu-btn').onclick = function () {
+    this.classList.toggle('actived');
+    document.querySelector('body').classList.toggle('overflow');
+    document.querySelector('.header__content').classList.toggle('show');
+}
