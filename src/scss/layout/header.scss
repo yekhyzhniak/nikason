@@ -1,62 +1,164 @@
-// =====================================================================================================================
-.header {
-  width: 100%;
-  &.sticky {
-    // ..стили для липкого хедера
-  }
-  // .header__container
-  &__container {
-    height: rem($headerHeight);
-    display: flex;
-    align-items: center;
-  }
-}
-// =====================================================================================================================
-
-// Burger
-/*
-.icon-menu {
-  display: none;
-  @include media(767) {
-    display: block;
+.header{
+    padding: 0;
     position: relative;
-    width: rem(30);
-    height: rem(18);
-    cursor: pointer;
-    z-index: 5;
-    span,
-    &::before,
-    &::after {
-      content: "";
-      transition: all 300ms ease 0ms;
-      right: 0;
-      position: absolute;
-      width: 100%;
-      height: rem(2);
-      background-color: #000;
+    &__container{
+        @include m-phone{
+            margin-top: 15px;
+        }
     }
-    &::before {
-      top: 0;
+    &__content{
+        display: flex;
+        height: 140px;
+        @include m-phone{
+            flex-direction: column-reverse;
+            height: 100%;
+        }
     }
-    &::after {
-      bottom: 0;
+    &__lists{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include m-phone{
+            flex-direction: column;
+            align-items: center;
+        }
     }
-    span {
-      top: calc(50% - rem(1));
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        width: 330px;
+        @include m-tablet-wide{
+            width: 300px;
+        }
+        @include m-tablet{
+            width: 280px;
+        }
+        @include m-phone{
+            flex-direction: column;
+            width: 130px;
+        }
+        &-item{}
+        &-item:not(:last-child){
+            @include m-phone{
+                margin-bottom: 30px;
+            }
+        }
+        &-link{
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #323232;
+        }
     }
-    .menu-open & {
-      span {
-        width: 0;
-      }
-      &::before {
-        top: calc(50% - rem(1));
-        transform: rotate(-45deg);
-      }
-      &::after {
-        bottom: calc(50% - rem(1));
-        transform: rotate(45deg);
-      }
+    &__list:not(:last-child){
+        @include m-phone{
+            margin-bottom: 30px;
+        }
+        
     }
-  }
+    &__list:last-child{
+        width: 250px;
+        @include m-tablet-wide{
+            width: 200px;
+        }
+        @include m-tablet{
+            width: 170px;
+        }
+        @include m-phone{
+            width: 130px;
+        }
+    }
+    &__symbols{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        @include m-phone{
+            position: relative;
+            top: 0;
+            left: 0;
+            margin-right: 0;
+            transform: translate(0, 0);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+    &__logo{
+        &-pic{
+            object-fit: cover;
+        }
+    }
+
 }
-*/
+
+
+
+
+
+.menu-btn {
+	width: 36px;
+	height: 31px;
+	padding: 5px;
+	margin-top: -5px;
+	margin-left: -5px;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	display: none;
+    z-index: 10;
+    position: relative;
+    @include m-phone() {
+        display: flex;
+        align-self: center;
+    }
+	&__wrap {
+		width: 26px;
+		height: 21px;
+		position: relative;
+	}
+	span {
+		position: absolute;
+		top: 50%;
+		background-color: #57463A;
+		width: 100%;
+		height: 2px;
+		margin-top: -1px;
+		border-radius: 0px;
+		transition: transform 0.2s, opacity 0.2s, margin-top 0.2s;
+        // Внутрь инклуда ложим параметры, которые будут юзаться для закрывашки бургера, только для спана!
+        @include m-tablet() {
+            
+        }
+		&:nth-child(1) {
+			transform: translateY(-8px);
+		}
+		&:nth-child(2) {
+			width: 17px;
+		}
+		&:nth-child(3) {
+			transform: translateY(8px);
+		}
+	}
+	&.actived {
+		span {
+			&:nth-child(1) {
+				transform: translateY(0) rotate(-45deg);
+			}
+			&:nth-child(2) {
+				width: 100%;
+				opacity: 0;
+			}
+			&:nth-child(3) {
+				transform: translateY(0) rotate(45deg);
+			}
+		}
+	}
+}

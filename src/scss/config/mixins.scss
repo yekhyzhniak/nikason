@@ -132,3 +132,49 @@
     @content
   }
 }
+
+@mixin m-custom-h($mah){
+    @media (max-height: $mah) {
+        @content
+    }
+}
+@mixin m-desktop-small(){
+    @media (max-width: 1650px) {
+        @content
+    }
+}
+@mixin m-laptop(){
+    @media (max-width: 1439px) {
+        @content
+    }
+}
+@mixin m-tablet-wide(){
+    @media (max-width: 1169px) {
+        @content
+    }
+}
+@mixin m-tablet-min(){
+    @media (min-width: 1024px) {
+        @content
+    }
+}
+@mixin m-tablet(){
+    @media (max-width: 1023px) {
+        @content
+    }
+}
+@mixin m-phone(){
+    @media (max-width: 767px) {
+        @content
+    }
+}
+@mixin m-phone-max(){
+    @media (max-width: 767px) and (min-width: 376px) {
+        @content
+    }
+}
+@mixin m-custom($maw){
+    @media (max-width: $maw) {
+        @content
+    }
+}

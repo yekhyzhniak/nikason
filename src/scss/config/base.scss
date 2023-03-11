@@ -86,3 +86,30 @@ body {
     padding-top: rem($headerHeight);
   }
 }
+
+.section{
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    position: relative;
+    margin: 0 auto;
+    &_center {
+    	margin: 0 auto;
+    }
+    @include m-tablet-wide() {
+        max-width: 1024px;
+        
+    }
+    @include m-tablet() {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    @include m-phone() {
+        max-width: 375px;
+    }
+}
