@@ -1,10 +1,9 @@
 .header{
     padding: 0;
     position: relative;
+    border-bottom: 1px solid;
     &__container{
-        @include m-phone{
-            // padding-top: 100px;
-        }
+        @include m-phone{}
     }
     &__content{
         position: relative;
@@ -14,12 +13,13 @@
             flex-direction: column-reverse;
             height: 100%;
             padding: 80px 0 0 20px;
-            width: 80%;
             margin: 0 auto;
             border-left: 2px solid #000;
             height: 100vh;
-            margin-right: -100%;
-            transition: right 0.4s, ease;
+            background: #d5cdc4;
+            width: 750px;
+            right: -120%;
+            transition: right 1s ease;
         }
     }
     &__lists{
@@ -208,7 +208,8 @@
 }
 
 .show{
-    margin: 0 auto;
+    right: -10%;
+    transition: right 1s ease;
 }
 
 .active-link{
