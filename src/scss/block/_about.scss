@@ -1,0 +1,174 @@
+.about{
+    position: relative;
+    &__content{
+        padding: 160px 0 0 0;
+        @include m-phone{
+            padding: 90px 0 0 0;
+        }
+    }
+    &__title{
+        font-family: 'Tenor Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 120%;
+        color: #57463A;
+
+        margin-bottom: 100px;
+        @include m-phone{
+            margin-bottom: 60px;
+            font-size: 32px;
+            width: 200px;
+        }
+    }
+    &__offers{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 160px;
+        @include m-phone{
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 90px;
+        }
+        &-item{
+            padding: 0 30px 20px 30px;
+            width: 360px;
+            border-bottom: 3px solid #715B4B;
+            text-align: center;
+
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 150%;
+            color: #323232;
+
+            @include m-tablet-wide{
+                width: 300px;
+            }
+            @include m-tablet{
+                width: 230px;
+                font-size: 14px;
+            }
+            @include m-phone{
+                width: 300px;
+                font-size: 18px;
+            }
+        }
+        &-item:not(:last-child){
+            @include m-phone{
+                margin-bottom: 40px;
+            }
+        }
+    }
+    &__subtitle{
+        font-family: 'Tenor Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 150%;
+        color: #57463A;
+
+        margin-bottom: 100px;
+        @include m-phone{
+            margin-bottom: 70px;
+            font-size: 32px;
+        }
+    }
+    &__categories{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 160px;
+        @include m-phone{
+            margin-bottom: 90px;
+        }
+        &-item{
+            border-top: 1px solid #000000;
+            border-left: 1px solid #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 290px;
+            height: 250px;
+            @include m-tablet-wide{
+                width: 240px;
+                height: 220px;
+            }
+            @include m-tablet{
+                width: 300px;
+                height: 280px;
+            }
+            @include m-phone{
+                width: 150px;
+                height: 200px;
+            }
+        }
+        &-item:nth-child(1){
+        }
+        &-item:nth-child(2){
+            @include m-tablet{
+                border-right: 1px solid #000;
+            }
+        }
+        &-item:nth-child(3){
+            @include m-tablet{
+                
+            }
+        }
+        &-item:nth-child(4){
+            border-right: 1px solid #000;
+        }
+        &-item:nth-child(5){
+            border-bottom: 1px solid #000;
+        }
+        &-item:nth-child(6){
+            border-bottom: 1px solid #000;
+            @include m-tablet{
+                border-right: 1px solid #000;
+            }
+        }
+        &-item:nth-child(7){
+            border-bottom: 1px solid #000;
+            @include m-tablet{
+                border-top: none;
+            }
+        }
+        &-item:nth-child(8){
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            @include m-tablet{
+                border-top: none;
+            }
+        }
+        &_pic{
+            width: 100px;
+            height: 100px;
+        }
+        &-text{
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 102.99%;
+            color: #323232;
+            
+            margin-top: 20px;
+        }
+    }
+}
+
+.width-mini{
+    @include m-phone{
+        width: 220px;
+    margin-left: 22.5px;
+    }
+    
+}
+.width-medium{
+    @include m-phone{
+        width: 300px;
+        margin-left: 22.5px;
+    }
+}
