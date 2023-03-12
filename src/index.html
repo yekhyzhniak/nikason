@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html', {
-    'title': 'Главная'
-  })
-  <body>
+@@include('html/head.html', {
+'title': 'Главная'
+})
+
+<body>
     <div class="wrapper">
-      @@include('html/header.html', {})
-      <main class="page">
-        <div data-observ></div>
-        
-      </main>
-      @@include('html/footer.html', {})
+        @@include('html/header.html', {})
+        <main class="page">
+            <section class="section">
+                <div class="container">
+                    <div class="opening">
+                        <div class="opening__img">
+                            <img src="./images/opening-img.jpg" alt="opening-img" class="opening__img-pic">
+                        </div>
+                        <div class="opening__content">
+                            <div class="opening__content-text">Столярная мастерская NIKASON BRAND</div>
+                            <div class="opening__content-title">
+                                <h1 class="opening__content-titleText">Изготовление и реставрация мебели</h1>
+                            </div>
+                            <div class="opening__content-subtitle">Авторская мебель ручной работы, сделанная с душой и
+                                трепетом.
+                            </div>
+                            <div class="opening__content-btn">
+                                <a href="" class="opening__btn-link btn-green">Смотреть услуги</a>
+                            </div>
+                            <div class="opening__socials">
+                                <a href="#" class="opening__socials-link">
+                                    <svg class="opening__socials-pic">
+                                        <use xlink:href="./images/icons/icons.svg#insta-link"></use>'svg'
+                                    </svg>
+                                </a>
+                                <a href="#" class="opening__socials-link">
+                                    <svg class="opening__socials-pic">
+                                        <use xlink:href="./images/icons/icons.svg#tele-link"></use>'svg'
+                                    </svg>
+                                </a>
+                                <a href="#" class="opening__socials-link">
+                                    <svg class="opening__socials-pic">
+                                        <use xlink:href="./images/icons/icons.svg#whats-link"></use>'svg'
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        @@include('html/footer.html', {})
     </div>
     @@include('html/script.html', {})
-  </body>
-</html> 
+</body>
+
+</html>

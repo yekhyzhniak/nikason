@@ -17,26 +17,26 @@ import { ftp } from './gulp/tasks/ftp.js'
 
 // Передаем значения в глобальную переменную
 global.app = {
-  isBuild: process.argv.includes('--build'),
-  isDev: !process.argv.includes('--build'),
-  path,
-  gulp,
-  plugins,
+    isBuild: process.argv.includes('--build'),
+    isDev: !process.argv.includes('--build'),
+    path,
+    gulp,
+    plugins,
 }
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
-  gulp.watch(path.watch.static, copy)
-  gulp.watch(path.watch.html, html)
-  gulp.watch(path.watch.scss, scss)
-  gulp.watch(path.watch.js, js)
-  gulp.watch(path.watch.images, images)
+    gulp.watch(path.watch.static, copy)
+    gulp.watch(path.watch.html, html)
+    gulp.watch(path.watch.scss, scss)
+    gulp.watch(path.watch.js, js)
+    gulp.watch(path.watch.images, images)
 }
 
 // Последовательная обработка шрифтов
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle)
 // Основные задачи
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images))
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, svgSprive))
 // Построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server))
 const build = gulp.series(reset, mainTasks)
