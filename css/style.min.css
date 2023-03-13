@@ -825,3 +825,122 @@ body.lock {
     margin-left: 22.5px;
   }
 }
+
+.masters {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1440px;
+  display: flex;
+}
+@media (max-width: 1169px) {
+  .masters {
+    width: 1024px;
+  }
+}
+@media (max-width: 1023px) {
+  .masters {
+    width: 768px;
+  }
+}
+@media (max-width: 767px) {
+  .masters {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.masters__img {
+  width: 50%;
+}
+@media (max-width: 1023px) {
+  .masters__img {
+    height: 322px;
+  }
+}
+@media (max-width: 767px) {
+  .masters__img {
+    position: relative;
+    width: 375px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 60px;
+  }
+}
+.masters__img-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.masters__content {
+  width: 50%;
+  padding: 70px 200px 50px 40px;
+}
+@media (max-width: 1169px) {
+  .masters__content {
+    padding: 20px;
+  }
+}
+@media (max-width: 1023px) {
+  .masters__content {
+    position: relative;
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .masters__content {
+    width: 100%;
+  }
+}
+.masters__content-title {
+  font-family: "Tenor Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #000000;
+  margin-bottom: 40px;
+}
+@media (max-width: 1169px) {
+  .masters__content-title {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 1023px) {
+  .masters__content-title {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .masters__content-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+.masters__content-text {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+  color: #000000;
+  margin-bottom: 40px;
+}
+@media (max-width: 1169px) {
+  .masters__content-text {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 1023px) {
+  .masters__content-text {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .masters__content-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+}
