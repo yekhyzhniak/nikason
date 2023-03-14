@@ -1086,6 +1086,11 @@ body.lock {
     padding: 20px;
   }
 }
+@media (max-width: 1023px) {
+  .offers__item-dscr {
+    padding: 15px;
+  }
+}
 @media (max-width: 767px) {
   .offers__item-dscr {
     width: 100%;
@@ -1125,6 +1130,7 @@ body.lock {
 @media (max-width: 1023px) {
   .offers__item-text {
     font-size: 14px;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 767px) {
@@ -1136,4 +1142,127 @@ body.lock {
 
 .brown {
   background: #D4CDC3;
+}
+
+.garanties {
+  position: relative;
+}
+.garanties__content {
+  width: 100%;
+  padding: 200px 0;
+}
+@media (max-width: 767px) {
+  .garanties__content {
+    padding: 100px 0 150px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.garanties__content-title {
+  display: none;
+}
+@media (max-width: 767px) {
+  .garanties__content-title {
+    display: block;
+    font-family: "Tenor Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #57463A;
+    margin-bottom: 70px;
+    width: 348px;
+    position: relative;
+    margin-right: -50px;
+  }
+}
+.garanties__outterBd {
+  border: 7px solid #A1B29F;
+  padding: 13px;
+}
+@media (max-width: 767px) {
+  .garanties__outterBd {
+    width: 300px;
+  }
+}
+.garanties__innerBd {
+  border: 1px solid #715B4B;
+  padding: 100px 60px 180px 100px;
+  position: relative;
+}
+@media (max-width: 1169px) {
+  .garanties__innerBd {
+    padding: 50px 30px 180px 30px;
+  }
+}
+@media (max-width: 767px) {
+  .garanties__innerBd {
+    padding: 90px 0 140px 14px;
+  }
+}
+.garanties__title {
+  font-family: "Tenor Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 150%;
+  color: #57463A;
+  width: 700px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+@media (max-width: 1023px) {
+  .garanties__title {
+    margin-bottom: 40px;
+    width: 600px;
+  }
+}
+@media (max-width: 767px) {
+  .garanties__title {
+    display: none;
+  }
+}
+.garanties__text {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 150%;
+  color: #000000;
+  width: 920px;
+  text-align: left;
+  margin: 0 auto;
+}
+@media (max-width: 1023px) {
+  .garanties__text {
+    width: 600px;
+  }
+}
+@media (max-width: 767px) {
+  .garanties__text {
+    width: 260px;
+    font-size: 16px;
+  }
+}
+.garanties__logo {
+  position: absolute;
+  bottom: 38px;
+  right: 62px;
+  width: 150px;
+  height: 150px;
+}
+@media (max-width: 767px) {
+  .garanties__logo {
+    width: 68px;
+    height: 68px;
+    bottom: 64px;
+    right: 7px;
+  }
+}
+.garanties__logo-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
