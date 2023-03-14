@@ -62,6 +62,9 @@
             @include m-tablet-wide{
                 padding: 20px;
             }
+            @include m-tablet{
+                padding: 15px;
+            }
             @include m-phone{
                 width: 100%;
                 padding: 110px 39px;
@@ -96,6 +99,7 @@
             margin-bottom: 55px;
             @include m-tablet{
                 font-size: 14px;
+                margin-bottom: 30px;
             }
             @include m-phone{
                 font-size: 18px;
