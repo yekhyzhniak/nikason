@@ -31,7 +31,9 @@
             height: 415px;
         }
         @include m-phone{
-            width: 100%;
+            width: 375px;
+            left: 50%;
+            transform: translateX(-50%);
         }
         &-pic{
             width: 100%;
@@ -55,16 +57,10 @@
         @include m-phone{
             width: 345px;
             padding: 0;
-            padding: 120px 0 40px 0;
+            padding: 120px 0 40px 20px;
             height: auto;
         }
         &-text{
-            font-family: 'Open Sans', sans-serif;
-            font-style: normal;
-            font-weight: 300;
-            font-size: 16px;
-            line-height: 150%;
-            color: #323232;
             margin-bottom: 20px;
             @include m-phone{
                 width: 200px;
@@ -81,12 +77,6 @@
             }
         }
         &-titleText{
-            font-family: 'Tenor Sans', sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 48px;
-            line-height: 120%;
-            color: #57463A;
             @include m-tablet{
                 font-size: 30px;
             }
@@ -95,12 +85,6 @@
             }
         }
         &-subtitle{
-            font-family: 'Open Sans', sans-serif;
-            font-style: normal;
-            font-weight: 300;
-            font-size: 18px;
-            line-height: 150%;
-            color: #323232;
             margin-bottom: 70px;
         }
         &-btn{

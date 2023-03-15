@@ -7,18 +7,13 @@
         }
     }
     &__title{
-        font-family: 'Tenor Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 48px;
-        line-height: 120%;
-        color: #57463A;
 
         margin-bottom: 100px;
         @include m-phone{
             margin-bottom: 60px;
             font-size: 32px;
             width: 200px;
+            padding: 0 0 0 20px;
         }
     }
     &__offers{
@@ -36,12 +31,6 @@
             border-bottom: 3px solid #715B4B;
             text-align: center;
 
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 300;
-            font-size: 18px;
-            line-height: 150%;
-            color: #323232;
 
             @include m-tablet-wide{
                 width: 300px;
@@ -62,17 +51,11 @@
         }
     }
     &__subtitle{
-        font-family: 'Tenor Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 48px;
-        line-height: 150%;
-        color: #57463A;
-
         margin-bottom: 100px;
         @include m-phone{
             margin-bottom: 70px;
             font-size: 32px;
+            padding: 0 0 0 20px;
         }
     }
     &__categories{
@@ -146,14 +129,7 @@
             width: 100px;
             height: 100px;
         }
-        &-text{
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 300;
-            font-size: 18px;
-            line-height: 102.99%;
-            color: #323232;
-            
+        &-text{            
             margin-top: 20px;
         }
     }
@@ -162,13 +138,11 @@
 .width-mini{
     @include m-phone{
         width: 220px;
-    margin-left: 22.5px;
     }
     
 }
 .width-medium{
     @include m-phone{
         width: 300px;
-        margin-left: 22.5px;
     }
 }

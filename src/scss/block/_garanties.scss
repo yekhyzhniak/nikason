@@ -13,24 +13,21 @@
             display: none;
             @include m-phone{
                 display: block;
-                font-family: 'Tenor Sans', sans-serif;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 32px;
-                line-height: 150%;
-                color: #57463A;
                 margin-bottom: 70px;
                 width: 348px;
                 position: relative;
-                margin-right: -50px;
+                font-size: 32px;
+                padding: 0 0 0 20px;
             }
         }
     }
     &__outterBd{
         border: 7px solid #A1B29F;
         padding: 13px;
+        
         @include m-phone{
             width: 300px;
+            position: relative;
         }
     }
     &__innerBd{
@@ -41,16 +38,10 @@
             padding: 50px 30px 180px 30px;
         }
         @include m-phone{
-            padding: 90px 0 140px 14px;
+            padding: 90px 0 140px 5px;
         }
     }
     &__title{
-        font-family: 'Tenor Sans', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 48px;
-        line-height: 150%;
-        color: #57463A;
         width: 700px;
         text-align: center;
         margin: 0 auto;
@@ -64,12 +55,6 @@
         }
     }
     &__text{
-        font-family: 'Open Sans', sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 24px;
-        line-height: 150%;
-        color: #000000;
         width: 920px;
         text-align: left;
         margin: 0 auto;
@@ -77,8 +62,9 @@
             width: 600px;
         }
         @include m-phone{
-            width: 260px;
+            width: auto;
             font-size: 16px;
+            margin: 0 auto;
         }
     }
     &__logo{

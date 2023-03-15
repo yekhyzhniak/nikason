@@ -6,13 +6,6 @@
             padding: 90px 0 80px 0;
         }
         &-title{
-            font-family: 'Tenor Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 48px;
-            line-height: 150%;
-            color: #57463A;
-
             margin-bottom: 100px;
             @include m-phone{
                 font-size: 32px;

@@ -6,17 +6,12 @@
             padding: 80px 0 0 0;
         }
         &-title{
-            font-family: 'Tenor Sans', sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 48px;
-            line-height: 150%;
-            color: #57463A;
-
+            
             margin-bottom: 100px;
             @include m-phone{
                 margin-bottom: 50px;
                 font-size: 32px;
+                padding: 0 0 0 20px;
             }
         }
     }
@@ -41,6 +36,7 @@
             width: 50%;
             @include m-tablet-wide{
                 height: 380px;
+                overflow: hidden;
             }
             @include m-tablet{
                 height: 286px;
@@ -61,24 +57,21 @@
             background: #E3DACE;
             @include m-tablet-wide{
                 padding: 20px;
+                height: 380px;
             }
             @include m-tablet{
                 padding: 15px;
+                height: 286px;
             }
             @include m-phone{
                 width: 100%;
                 padding: 110px 39px;
+                height: auto;
             }
         }
         &-title{
-            font-family: 'Tenor Sans', sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 24px;
-            line-height: 150%;
-            color: #000000;
-
-            margin-bottom: 40px;
+            
+            margin-bottom: 20px;
             @include m-tablet{
                 font-size: 18px;
                 margin-bottom: 20px;
@@ -89,13 +82,7 @@
             }
         }
         &-text{
-            font-family: 'Open Sans', sans-serif;
-            font-style: normal;
-            font-weight: 300;
-            font-size: 18px;
-            line-height: 150%;
-            color: #000000;
-
+            
             margin-bottom: 55px;
             @include m-tablet{
                 font-size: 14px;
