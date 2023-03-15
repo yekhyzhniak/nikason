@@ -248,6 +248,33 @@ body.lock {
   }
 }
 
+.title {
+  font-family: "Tenor Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+  color: #57463A;
+}
+
+.subtitle {
+  font-family: "Tenor Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #000000;
+}
+
+.text {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+  color: #323232;
+}
+
 .header {
   padding: 0;
   position: relative;
@@ -320,6 +347,7 @@ body.lock {
   font-size: 16px;
   line-height: 150%;
   color: #323232;
+  transition: 0.4s;
 }
 @media (max-width: 767px) {
   .header__list:not(:last-child) {
@@ -446,6 +474,15 @@ body.lock {
   border-bottom: 2px solid #57463A;
 }
 
+.passive-link {
+  transition: 0.2s;
+}
+
+.passive-link:hover {
+  color: #525652;
+  border-bottom: 2px solid #525652;
+}
+
 .opening {
   position: relative;
   left: 50%;
@@ -492,7 +529,9 @@ body.lock {
 }
 @media (max-width: 767px) {
   .opening__img {
-    width: 100%;
+    width: 375px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 .opening__img-pic {
@@ -520,17 +559,11 @@ body.lock {
   .opening__content {
     width: 345px;
     padding: 0;
-    padding: 120px 0 40px 0;
+    padding: 120px 0 40px 20px;
     height: auto;
   }
 }
 .opening__content-text {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 150%;
-  color: #323232;
   margin-bottom: 20px;
 }
 @media (max-width: 767px) {
@@ -552,14 +585,6 @@ body.lock {
     margin-bottom: 40px;
   }
 }
-.opening__content-titleText {
-  font-family: "Tenor Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 120%;
-  color: #57463A;
-}
 @media (max-width: 1023px) {
   .opening__content-titleText {
     font-size: 30px;
@@ -571,12 +596,6 @@ body.lock {
   }
 }
 .opening__content-subtitle {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 150%;
-  color: #323232;
   margin-bottom: 70px;
 }
 .opening__content-btn {
@@ -647,12 +666,6 @@ body.lock {
   }
 }
 .about__title {
-  font-family: "Tenor Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 120%;
-  color: #57463A;
   margin-bottom: 100px;
 }
 @media (max-width: 767px) {
@@ -660,6 +673,7 @@ body.lock {
     margin-bottom: 60px;
     font-size: 32px;
     width: 200px;
+    padding: 0 0 0 20px;
   }
 }
 .about__offers {
@@ -679,12 +693,6 @@ body.lock {
   width: 360px;
   border-bottom: 3px solid #715B4B;
   text-align: center;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 150%;
-  color: #323232;
 }
 @media (max-width: 1169px) {
   .about__offers-item {
@@ -709,18 +717,13 @@ body.lock {
   }
 }
 .about__subtitle {
-  font-family: "Tenor Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 150%;
-  color: #57463A;
   margin-bottom: 100px;
 }
 @media (max-width: 767px) {
   .about__subtitle {
     margin-bottom: 70px;
     font-size: 32px;
+    padding: 0 0 0 20px;
   }
 }
 .about__categories {
@@ -803,26 +806,18 @@ body.lock {
   height: 100px;
 }
 .about__categories-text {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 102.99%;
-  color: #323232;
   margin-top: 20px;
 }
 
 @media (max-width: 767px) {
   .width-mini {
     width: 220px;
-    margin-left: 22.5px;
   }
 }
 
 @media (max-width: 767px) {
   .width-medium {
     width: 300px;
-    margin-left: 22.5px;
   }
 }
 
@@ -893,12 +888,6 @@ body.lock {
   }
 }
 .masters__content-title {
-  font-family: "Tenor Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 150%;
-  color: #000000;
   margin-bottom: 40px;
 }
 @media (max-width: 1169px) {
@@ -919,12 +908,6 @@ body.lock {
   }
 }
 .masters__content-text {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 150%;
-  color: #000000;
   margin-bottom: 40px;
 }
 @media (max-width: 1169px) {
@@ -956,12 +939,6 @@ body.lock {
   }
 }
 .video__content-title {
-  font-family: "Tenor Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 150%;
-  color: #57463A;
   margin-bottom: 100px;
 }
 @media (max-width: 767px) {
@@ -1014,18 +991,13 @@ body.lock {
   }
 }
 .offers__content-title {
-  font-family: "Tenor Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 150%;
-  color: #57463A;
   margin-bottom: 100px;
 }
 @media (max-width: 767px) {
   .offers__content-title {
     margin-bottom: 50px;
     font-size: 32px;
+    padding: 0 0 0 20px;
   }
 }
 .offers__item {
@@ -1058,6 +1030,7 @@ body.lock {
 @media (max-width: 1169px) {
   .offers__item-pic {
     height: 380px;
+    overflow: hidden;
   }
 }
 @media (max-width: 1023px) {
@@ -1084,27 +1057,24 @@ body.lock {
 @media (max-width: 1169px) {
   .offers__item-dscr {
     padding: 20px;
+    height: 380px;
   }
 }
 @media (max-width: 1023px) {
   .offers__item-dscr {
     padding: 15px;
+    height: 286px;
   }
 }
 @media (max-width: 767px) {
   .offers__item-dscr {
     width: 100%;
     padding: 110px 39px;
+    height: auto;
   }
 }
 .offers__item-title {
-  font-family: "Tenor Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 150%;
-  color: #000000;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 @media (max-width: 1023px) {
   .offers__item-title {
@@ -1119,12 +1089,6 @@ body.lock {
   }
 }
 .offers__item-text {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 150%;
-  color: #000000;
   margin-bottom: 55px;
 }
 @media (max-width: 1023px) {
@@ -1165,16 +1129,11 @@ body.lock {
 @media (max-width: 767px) {
   .garanties__content-title {
     display: block;
-    font-family: "Tenor Sans", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
-    color: #57463A;
     margin-bottom: 70px;
     width: 348px;
     position: relative;
-    margin-right: -50px;
+    font-size: 32px;
+    padding: 0 0 0 20px;
   }
 }
 .garanties__outterBd {
@@ -1184,6 +1143,7 @@ body.lock {
 @media (max-width: 767px) {
   .garanties__outterBd {
     width: 300px;
+    position: relative;
   }
 }
 .garanties__innerBd {
@@ -1198,16 +1158,10 @@ body.lock {
 }
 @media (max-width: 767px) {
   .garanties__innerBd {
-    padding: 90px 0 140px 14px;
+    padding: 90px 0 140px 5px;
   }
 }
 .garanties__title {
-  font-family: "Tenor Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 150%;
-  color: #57463A;
   width: 700px;
   text-align: center;
   margin: 0 auto;
@@ -1225,12 +1179,6 @@ body.lock {
   }
 }
 .garanties__text {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 150%;
-  color: #000000;
   width: 920px;
   text-align: left;
   margin: 0 auto;
@@ -1242,8 +1190,9 @@ body.lock {
 }
 @media (max-width: 767px) {
   .garanties__text {
-    width: 260px;
+    width: auto;
     font-size: 16px;
+    margin: 0 auto;
   }
 }
 .garanties__logo {
