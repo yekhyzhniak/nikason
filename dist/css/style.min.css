@@ -505,10 +505,8 @@ body.lock {
 @media (max-width: 767px) {
   .opening {
     flex-direction: column-reverse;
-    width: 100%;
+    width: 375px;
     position: relative;
-    left: 0;
-    transform: translateX(0);
     border-top: none;
     border-bottom: none;
   }
@@ -530,8 +528,6 @@ body.lock {
 @media (max-width: 767px) {
   .opening__img {
     width: 375px;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 .opening__img-pic {
@@ -559,7 +555,7 @@ body.lock {
   .opening__content {
     width: 345px;
     padding: 0;
-    padding: 120px 0 40px 20px;
+    padding: 120px 0 40px 35px;
     height: auto;
   }
 }
@@ -840,7 +836,7 @@ body.lock {
 }
 @media (max-width: 767px) {
   .masters {
-    width: 100%;
+    width: 375px;
     display: flex;
     flex-direction: column;
   }
@@ -850,22 +846,19 @@ body.lock {
 }
 @media (max-width: 1023px) {
   .masters__img {
-    height: 322px;
+    height: 250px;
   }
 }
 @media (max-width: 767px) {
   .masters__img {
     position: relative;
     width: 375px;
-    left: 50%;
-    transform: translateX(-50%);
     margin-bottom: 60px;
   }
 }
 .masters__img-pic {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .masters__content {
   width: 50%;
@@ -880,11 +873,14 @@ body.lock {
   .masters__content {
     position: relative;
     width: 50%;
+    height: 260px;
   }
 }
 @media (max-width: 767px) {
   .masters__content {
     width: 100%;
+    height: auto;
+    padding: 0 20px 20px 20px;
   }
 }
 .masters__content-title {
@@ -898,7 +894,7 @@ body.lock {
 @media (max-width: 1023px) {
   .masters__content-title {
     font-size: 18px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 767px) {
@@ -918,7 +914,7 @@ body.lock {
 @media (max-width: 1023px) {
   .masters__content-text {
     font-size: 14px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
   }
 }
 @media (max-width: 767px) {
@@ -927,6 +923,15 @@ body.lock {
     margin-bottom: 30px;
   }
 }
+.light-green {
+  background: #EBEEEB;
+}
+@media (max-width: 767px) {
+  .light-green {
+    background: none;
+  }
+}
+
 .video {
   position: relative;
 }

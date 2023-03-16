@@ -14,10 +14,10 @@
     }
     @include m-phone{
         flex-direction: column-reverse;
-        width: 100%;
+        width: 375px;
         position: relative;
-        left: 0;
-        transform: translateX(0);
+        // left: 0;
+        // transform: none;
         border-top: none;
         border-bottom: none;
     }
@@ -32,8 +32,8 @@
         }
         @include m-phone{
             width: 375px;
-            left: 50%;
-            transform: translateX(-50%);
+            // left: 50%;
+            // transform: translateX(-50%);
         }
         &-pic{
             width: 100%;
@@ -57,7 +57,7 @@
         @include m-phone{
             width: 345px;
             padding: 0;
-            padding: 120px 0 40px 20px;
+            padding: 120px 0 40px 35px;
             height: auto;
         }
         &-text{
