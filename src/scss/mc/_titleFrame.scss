@@ -1,0 +1,70 @@
+.titleFrame{
+    position: relative;
+    width: 100%;
+    @include m-phone{
+        padding-top: 115px;
+    }
+    &__bg{
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1440px;
+        &-pic{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content{
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        padding: 268px 0 152px 0;
+        @include m-tablet{
+            padding: 263px 0 100px 0;
+        }
+        @include m-phone{
+            padding: 250px 0 153px 20px;
+        }
+        &-title{
+            text-align: center;
+            margin-bottom: 100px;
+            @include m-phone{
+                margin-bottom: 60px;
+                text-align: left;
+            }
+        }
+        &-btn{
+            text-align: center;
+        }
+    }
+}
+
+.white{
+    color: #F6F6F6;
+}
+
+.btn-white{
+    padding: 20px 60px;
+    background: #F6F6F6;
+
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #4C6D77;
+    transition: 0.4s;
+}
+
+.btn-white:hover{
+    background: #4C6D77;
+    color: #F6F6F6;
+}
+
+.text-little{
+    @include m-phone{
+        font-size: 32px;
+    }
+}

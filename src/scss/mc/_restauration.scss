@@ -1,0 +1,61 @@
+.restauration{
+    position: relative;
+    width: 100%;
+    &__content{
+        padding: 160px 0 80px 0;
+        @include m-phone{
+            padding: 90px 0 50px 0;
+        }
+    }
+    &__title{
+        margin-bottom: 80px;
+        @include m-phone{
+            font-size: 32px;
+            padding: 0 0 0 20px;
+        }
+    }
+    &__offer{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item{
+        position: relative;
+        height: 310px;
+        width:calc( ( 100% - 60px ) / 4 );
+        margin-bottom: 30px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        transition: 0.4s;
+        @include m-tablet{
+            width:calc( ( 100% - 60px ) / 2 );
+        }
+        @include m-phone{
+            width:calc( ( 100% - 20px ) / 2 );
+            height: auto;
+        }
+
+        &-img{
+            display: block;
+            width: 70%;
+            object-fit: cover;
+            margin: 0 auto;
+            @include m-tablet{
+                width: 60%;
+            }
+
+        }
+        &-text{
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+    &__item:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    }
+}
