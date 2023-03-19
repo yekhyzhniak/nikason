@@ -1,0 +1,55 @@
+.joinery{
+    position: relative;
+    &__content{
+        padding: 80px 0;
+        @include m-phone{
+            padding: 50px 0;
+        }
+    }
+    &__title{
+        margin-bottom: 100px;
+        @include m-tablet{
+            margin-bottom: 60px;
+        }
+        @include m-phone{
+            font-size: 32px;
+            margin-bottom: 40px;
+            padding: 0 0 0 20px;
+        }
+    }
+    &__items{
+        display: flex;
+        justify-content: space-between;
+        @include m-phone{
+            flex-direction: column;
+        }
+    }
+    &__item{
+        width:calc( ( 100% - 40px ) / 2 );
+        @include m-phone{
+            width: 100%;
+        }
+        &-pic{
+            width: 100%;
+            height: 560px;
+            margin-bottom: 20px;
+            @include m-tablet-wide{
+                height: 480px;
+            }
+            @include m-tablet{
+                height: 350px;
+            }
+        }
+        &-img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &-text{
+            text-align: center;
+        }
+    }
+    &__item:not(:last-child){
+        margin-bottom: 32px;
+    }
+}
