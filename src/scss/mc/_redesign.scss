@@ -55,6 +55,9 @@
             position: absolute;
             top: 250px;
         }
+        @include m-tablet{
+            top: 200px;
+        }
         &-logo{
             width: 60px;
             height: 60px;
