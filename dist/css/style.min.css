@@ -1396,30 +1396,36 @@ body.lock {
 
 .titleFrame {
   position: relative;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 960px 0;
-  background-size: cover;
-  height: 100vh;
-  width: 1920px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  width: 100%;
 }
-.titleFrame::before {
+.titleFrame__bg {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1023px) {
+  .titleFrame__bg {
+    width: 1440px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-position: 0 0;
+    background-attachment: scroll;
+  }
+}
+.titleFrame__bg::before {
   content: "";
+  z-index: 1;
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 100%);
 }
-@media (max-width: 767px) {
-  .titleFrame {
-    padding-top: 250px;
-  }
-}
 .titleFrame__content {
+  position: relative;
   height: 100vh;
   width: 100%;
   left: 50%;
@@ -1435,7 +1441,7 @@ body.lock {
 }
 @media (max-width: 767px) {
   .titleFrame__content {
-    padding: 50px 0 0 0px;
+    padding: 200px 0 0 0px;
   }
 }
 .titleFrame__content-title {
@@ -1671,28 +1677,19 @@ body.lock {
 
 .slife {
   position: relative;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 960px -1000px;
-  background-size: cover;
   height: 50vh;
-  width: 1920px;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-@media (max-width: 1169px) {
-  .slife {
-    background-position: 960px -500px;
-  }
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
 }
 @media (max-width: 1023px) {
   .slife {
-    background-position: 960px 0;
-  }
-}
-@media (max-width: 767px) {
-  .slife {
-    background-position: 830px 0;
+    width: 1440px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-position: 0 -1140px;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
   }
 }
 .slife__content {

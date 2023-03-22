@@ -1,21 +1,16 @@
 .slife{
     position: relative;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 960px -1000px;
-    background-size: cover;
     height: 50vh;
-    width: 1920px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    @include m-tablet-wide{
-        background-position: 960px -500px;
-    }
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
     @include m-tablet{
-        background-position: 960px 0;
-    }
-    @include m-phone{
-        background-position: 830px 0;
+        width: 1440px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-position: 0 -1140px;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
     }
 
     &__content{
