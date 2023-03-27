@@ -97,4 +97,73 @@ document.querySelector('.js-menu-btn').onclick = function () {
 }
 
 ///
+let thumb = document.querySelectorAll('.js-ltlPic');
+thumb.forEach(function (element) {
+    element.onclick = showPic;
+})
+
+function showPic() {
+    let data = this.getAttribute('data');
+    let bigPic = document.querySelectorAll('.js-bigPic')
+    bigPic.forEach(function (elem) {
+        elem.classList.remove('active')
+    });
+    let thumb = document.querySelectorAll('.js-ltlPic');
+    thumb.forEach(function (elem) {
+        elem.classList.remove('visible')
+    })
+    document.querySelector(`.js-bigPic[data="${data}"]`).classList.add('active');
+    document.querySelector(`.js-ltlPic[data="${data}"]`).classList.add('visible');
+}
+
+let moveRight = document.querySelector('.js-Right');
+moveRight.onclick = function (event) {
+    event.preventDefault();
+    let data = Number(document.querySelector('.active').getAttribute('data'));
+
+    let bigPic = document.querySelectorAll('.js-bigPic')
+    bigPic.forEach(function (elem) {
+        elem.classList.remove('active')
+    });
+    let thumb = document.querySelectorAll('.js-ltlPic');
+    thumb.forEach(function (elem) {
+        elem.classList.remove('visible')
+    })
+
+    data += 1;
+    if (data > 8) {
+        data = 1;
+    }
+    document.querySelector(`.js-bigPic[data="${data}"]`).classList.add('active');
+    document.querySelector(`.js-ltlPic[data="${data}"]`).classList.add('visible');
+}
+
+let moveLeft = document.querySelector('.js-Left');
+moveLeft.onclick = function (event) {
+    event.preventDefault();
+    let data = Number(document.querySelector('.active').getAttribute('data'));
+
+    let bigPic = document.querySelectorAll('.js-bigPic')
+    bigPic.forEach(function (elem) {
+        elem.classList.remove('active')
+    });
+    let thumb = document.querySelectorAll('.js-ltlPic');
+    thumb.forEach(function (elem) {
+        elem.classList.remove('visible')
+    })
+
+    data -= 1;
+    if (data < 1) {
+        data = 8;
+    }
+    document.querySelector(`.js-bigPic[data="${data}"]`).classList.add('active');
+    document.querySelector(`.js-ltlPic[data="${data}"]`).classList.add('visible');
+}
+
+
+
+
+
+
+
 

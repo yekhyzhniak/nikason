@@ -1,0 +1,45 @@
+.whywe{
+    position: relative;
+    &__content{
+        position: relative;
+        width: 100%;
+        padding: 160px 0 0 0;
+        @include m-phone{
+            padding: 110px 0 0 20px;
+        }
+    }
+    &__title{
+        margin-bottom: 100px;
+        @include m-phone{
+            margin-bottom: 60px;
+            font-size: 32px;
+            width: 250px;
+        }
+    }
+    &__description{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item{
+        width: 300px;
+        margin-bottom: 80px;
+        @include m-phone{
+            margin-bottom: 40px;
+        }
+        &-title{
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        &-line{
+            margin-bottom: 20px;
+            width: 200px;
+            border-bottom: 1px solid #715B4B;
+        }
+        &-text{
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+}
