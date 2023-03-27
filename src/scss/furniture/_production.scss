@@ -1,0 +1,93 @@
+.production{
+    position: relative;
+    &__content{
+        padding: 80px 0;
+        @include m-phone{
+            padding: 40px 0;
+        }
+    }
+    &__title{
+        margin-bottom: 100px;
+        @include m-phone{
+            padding: 0 0 0 20px;
+            font-size: 32px;
+            max-width: 230px;
+            margin-bottom: 60px;
+        }
+    }
+    &__tablet{
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        &-item{
+            height: 130px;
+            width: 33.3%;
+            border-right: 1px solid #000000;
+            border-top: 1px solid #000;
+            position: relative;
+            @include m-phone{
+                width: 100%;
+            }
+        }
+        &-item:nth-child(1){
+            border-left: 1px solid #000;
+        }
+        &-item:nth-child(2){
+            @include m-phone{
+                border-left: 1px solid #000;
+            }
+        }
+        &-item:nth-child(3){
+            @include m-phone{
+                border-left: 1px solid #000;
+            }
+        }
+        &-item:nth-child(4){
+            border-left: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+        &-item:nth-child(5){
+            border-bottom: 1px solid #000;
+            @include m-phone{
+                border-top: none;
+                border-left: 1px solid #000;
+            }
+        }
+        &-item:nth-child(6){
+            border-bottom: 1px solid #000;
+            @include m-phone{
+                border-top: none;
+                border-left: 1px solid #000;
+            }
+        }
+        &-text{
+            font-size: 16px;
+            max-width: 232px;
+            position: absolute;
+            left: 40px;
+            bottom: 30px;
+            @include m-tablet-wide{
+                bottom: 20px;
+                left: 20px;
+            }
+            @include m-tablet{
+                bottom: 10px;
+                left: 10px;
+            }
+        }
+        &-num{
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            @include m-tablet-wide{
+                top: 20px;
+                right: 20px;
+            }
+            @include m-tablet{
+                top: 10px;
+                right: 10px;
+            }
+        }
+    }
+}
