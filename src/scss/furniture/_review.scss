@@ -1,0 +1,27 @@
+.review{
+    position: relative;
+    &__content{
+        padding: 80px 0 50px;
+        @include m-phone{
+            padding: 60px 0 50px;
+        }
+    }
+    &__title{
+        margin-bottom: 100px;
+        @include m-phone{
+            padding: 0 0 0 20px;
+            font-size: 32px;
+            margin-bottom: 50px;
+        }
+    }
+    &__slider{
+        overflow: hidden;
+        &-container{}
+    }
+    &__slide{
+        text-align: center;
+        &-pic{
+            max-width: 100%;
+        }
+    }
+}

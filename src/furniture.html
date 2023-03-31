@@ -182,13 +182,98 @@
                     <div class="review">
                         <div class="review__content">
                             <div class="review__title title">Клиенты о нас</div>
-
+                            <div class="review__slider swiper-container">
+                                <div class="review__slider-container swiper-wrapper">
+                                    <div class="review__slide swiper-slide">
+                                        <img src="./images/feedback-1.jpg" alt="slide-pic" class="review__slide-pic">
+                                    </div>
+                                    <div class="review__slide swiper-slide">
+                                        <img src="./images/feedback-2.jpg" alt="slide-pic" class="review__slide-pic">
+                                    </div>
+                                    <div class="review__slide swiper-slide">
+                                        <img src="./images/feedback-3.jpg" alt="slide-pic" class="review__slide-pic">
+                                    </div>
+                                    <div class="review__slide swiper-slide">
+                                        <img src="./images/feedback-4.jpg" alt="slide-pic" class="review__slide-pic">
+                                    </div>
+                                    <div class="review__slide swiper-slide">
+                                        <img src="./images/feedback-5.jpg" alt="slide-pic" class="review__slide-pic">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-    </div>
+            <section class="section">
+                <div class="container">
+                    <div class="feedback">
+                        <div class="feedback__content">
+                            <div class="feedback__title title">Оставьте заявку и мы с вами свяжемся</div>
+                            <div class="feedback__btn">
+                                <a href="#" class="feedback__btn-link btn-green js-showModal">Оставить заявку</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+    </div>
+    <div class="modal">
+        <div class="modal__bg">
+        </div>
+
+        <div class="modal__content">
+            <div class="modal__close js-modalClose">x</div>
+
+            <div class="modal__content-right">
+                <a href="#" class="footer__link">
+                    <svg class="footer__link-pic color-blck">
+                        <use xlink:href="./images/icons/icons.svg#tele-link2"></use>'svg'
+                    </svg>
+                </a>
+                <a href="#" class="footer__link">
+                    <svg class="footer__link-pic color-blck">
+                        <use xlink:href="./images/icons/icons.svg#insta-link2"></use>'svg'
+                    </svg>
+                </a>
+                <a href="#" class="footer__link">
+                    <svg class="footer__link-pic color-blck">
+                        <use xlink:href="./images/icons/icons.svg#whats-link2"></use>'svg'
+                    </svg>
+                </a>
+            </div>
+            <div class="modal__content-left">
+                <div class="modal__title subtitle">Оставьте ваши контактные данные для обратной связи</div>
+                <div class="modal__text text">Если у вас есть какие-либо вопросы или предложения по
+                    сотрудничесту -
+                    заполние форму ниже</div>
+
+                <form action="#">
+
+                    <!-- Каждый input для выравнивания вкладываем в блок input-box -->
+                    <div class="modal__input">
+                        <input class="modal__input-box" type="text" placeholder="Ваше имя" />
+                    </div>
+                    <div class="modal__input">
+                        <input class="modal__input-box" type="text" placeholder="Введите email" />
+                    </div>
+                    <div class="modal__input">
+                        <input class="modal__input-box" type="text" placeholder="Введите телефон" />
+                    </div>
+                    <div class="modal__input message-box">
+                        <textarea class="modal__input-box modal__input-textarea" placeholder="Сообщение"></textarea>
+                    </div>
+                    <div class="modal__button">
+                        <a href="#" class="modal__button-link btn-green">Отправить</a>
+                    </div>
+                </form>
+            </div>
+
+
+
+        </div>
+    </div>
 
     @@include('html/footer.html', {})
     </div>

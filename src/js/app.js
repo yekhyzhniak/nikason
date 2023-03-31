@@ -6,6 +6,7 @@
 
 Если мы хотим добавить модуль следует его расскоментировать
 */
+import Swiper from 'swiper';
 import {
     isWebp,
     headerFixed,
@@ -161,8 +162,54 @@ moveLeft.onclick = function (event) {
 }
 
 
+new Swiper('.review__slider', {
+    grabCursor: true,
+    mousewheel: {
+        sensitivity: 1,
+        eventsTarget: ".review__slider"
+    },
+
+    autoHeight: true,
+    slidesPerView: 5,
+    // centeredSlides: true,
+    loop: true,
+
+    breakpoints: {
+        375: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        998: {
+            slidesPerView: 3,
+        },
+        1024: {
+            slidesPerView: 5,
+        }
+    },
+    spaceBetween: 15,
+});
 
 
+let showModal = document.querySelector('.js-showModal');
+showModal.onclick = function (event) {
+    event.preventDefault();
+    document.querySelector('.modal').classList.add('showModal')
+    document.querySelector('.modal__content').classList.add('showModal-content')
+}
+
+let closeModal = document.querySelector('.js-modalClose');
+closeModal.onclick = function () {
+    document.querySelector('.modal').classList.remove('showModal')
+    document.querySelector('.modal__content').classList.remove('showModal-content')
+}
+
+let closeModale = document.querySelector('.modal__bg');
+closeModale.onclick = function () {
+    document.querySelector('.modal').classList.remove('showModal')
+    document.querySelector('.modal__content').classList.remove('showModal-content')
+}
 
 
 
