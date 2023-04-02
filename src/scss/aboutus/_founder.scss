@@ -1,0 +1,74 @@
+.founder{
+    position: relative;
+    width: 100%;
+    &__content{
+        position: relative;
+        width: 100%;
+        display: flex;
+        @include m-tablet{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__photo{
+        width: 460px;
+        height: 470px;
+        @include m-tablet{
+            margin-bottom: 60px;
+        }
+        @include m-phone{
+            width: 375px;
+            height: auto;
+        }
+        &-pic{
+            height: 100%;
+            object-fit: cover;
+            @include m-phone{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    &__dscr{
+        padding: 0 0 0 40px;
+        @include m-tablet-wide{
+            padding: 0 0 0 20px;
+        }
+        @include m-tablet{
+            padding: 0;
+            padding: 0 20px;
+        }
+        &-title{
+            margin-bottom: 20px;
+            @include m-tablet-wide{
+                margin-bottom: 10px;
+            }
+            @include m-tablet{
+                text-align: center;
+            }
+            @include m-phone{
+                text-align: start;
+            }
+        }
+        &-subtitle{
+            margin-bottom: 70px;
+            @include m-tablet-wide{
+                margin-bottom: 30px;
+            }
+            @include m-tablet{
+                text-align: center;
+            }
+            @include m-phone{
+                text-align: start;
+            }
+        }
+        &-text{
+            @include m-tablet-wide{
+                font-size: 16px;
+            }
+        }
+        &-text:not(:last-child){
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -90,7 +90,6 @@ AOS.init({
 });
 
 
-
 document.querySelector('.js-menu-btn').onclick = function () {
     this.classList.toggle('actived');
     document.querySelector('body').classList.toggle('overflow');
@@ -98,106 +97,150 @@ document.querySelector('.js-menu-btn').onclick = function () {
 }
 
 ///
-let thumb = document.querySelectorAll('.js-ltlPic');
-thumb.forEach(function (element) {
-    element.onclick = showPic;
-})
 
-function showPic() {
-    let data = this.getAttribute('data');
-    let bigPic = document.querySelectorAll('.js-bigPic')
-    bigPic.forEach(function (elem) {
-        elem.classList.remove('active')
-    });
-    let thumb = document.querySelectorAll('.js-ltlPic');
-    thumb.forEach(function (elem) {
-        elem.classList.remove('visible')
-    })
-    document.querySelector(`.js-bigPic[data="${data}"]`).classList.add('active');
-    document.querySelector(`.js-ltlPic[data="${data}"]`).classList.add('visible');
+if (document.querySelector('.js-mc') != null) {
+    document.querySelector('.js-mcLink').classList.add('active-link');
 }
 
-let moveRight = document.querySelector('.js-Right');
-moveRight.onclick = function (event) {
-    event.preventDefault();
-    let data = Number(document.querySelector('.active').getAttribute('data'));
+if (document.querySelector('.js-furniture') != null) {
+    document.querySelector('.js-furnitureLink').classList.add('active-link');
 
-    let bigPic = document.querySelectorAll('.js-bigPic')
-    bigPic.forEach(function (elem) {
-        elem.classList.remove('active')
-    });
+
     let thumb = document.querySelectorAll('.js-ltlPic');
-    thumb.forEach(function (elem) {
-        elem.classList.remove('visible')
+    thumb.forEach(function (element) {
+        element.onclick = showPic;
     })
 
-    data += 1;
-    if (data > 8) {
-        data = 1;
-    }
-    document.querySelector(`.js-bigPic[data="${data}"]`).classList.add('active');
-    document.querySelector(`.js-ltlPic[data="${data}"]`).classList.add('visible');
-}
 
-let moveLeft = document.querySelector('.js-Left');
-moveLeft.onclick = function (event) {
-    event.preventDefault();
-    let data = Number(document.querySelector('.active').getAttribute('data'));
+    function showPic() {
+        let data = this.getAttribute('data');
+        let bigPic = document.querySelectorAll('.js-bigPic')
+        bigPic.forEach(function (elem) {
+            elem.classList.remove('active')
+        });
+        let thumb = document.querySelectorAll('.js-ltlPic');
+        thumb.forEach(function (elem) {
+            elem.classList.remove('visible')
+        })
+        document.querySelector(`.js-bigPic[data="${data}"]`).classList.add('active');
+        document.querySelector(`.js-ltlPic[data="${data}"]`).classList.add('visible');
 
-    let bigPic = document.querySelectorAll('.js-bigPic')
-    bigPic.forEach(function (elem) {
-        elem.classList.remove('active')
-    });
-    let thumb = document.querySelectorAll('.js-ltlPic');
-    thumb.forEach(function (elem) {
-        elem.classList.remove('visible')
-    })
+        let moveRight = document.querySelector('.js-Right');
+        moveRight.onclick = function (event) {
+            event.preventDefault();
+            let data = Number(document.querySelector('.active').getAttribute('data'));
 
-    data -= 1;
-    if (data < 1) {
-        data = 8;
-    }
-    document.querySelector(`.js-bigPic[data="${data}"]`).classList.add('active');
-    document.querySelector(`.js-ltlPic[data="${data}"]`).classList.add('visible');
-}
+            let bigPic = document.querySelectorAll('.js-bigPic')
+            bigPic.forEach(function (elem) {
+                elem.classList.remove('active')
+            });
+            let thumb = document.querySelectorAll('.js-ltlPic');
+            thumb.forEach(function (elem) {
+                elem.classList.remove('visible')
+            })
 
-
-new Swiper('.review__slider', {
-    grabCursor: true,
-    mousewheel: {
-        sensitivity: 1,
-        eventsTarget: ".review__slider"
-    },
-
-    autoHeight: true,
-    slidesPerView: 5,
-    // centeredSlides: true,
-    loop: true,
-
-    breakpoints: {
-        375: {
-            slidesPerView: 1,
-        },
-        768: {
-            slidesPerView: 2,
-        },
-        998: {
-            slidesPerView: 3,
-        },
-        1024: {
-            slidesPerView: 5,
+            data += 1;
+            if (data > 8) {
+                data = 1;
+            }
+            document.querySelector(`.js-bigPic[data="${data}"]`).classList.add('active');
+            document.querySelector(`.js-ltlPic[data="${data}"]`).classList.add('visible');
         }
-    },
-    spaceBetween: 15,
-});
+
+        let moveLeft = document.querySelector('.js-Left');
+        moveLeft.onclick = function (event) {
+            event.preventDefault();
+            let data = Number(document.querySelector('.active').getAttribute('data'));
+
+            let bigPic = document.querySelectorAll('.js-bigPic')
+            bigPic.forEach(function (elem) {
+                elem.classList.remove('active')
+            });
+            let thumb = document.querySelectorAll('.js-ltlPic');
+            thumb.forEach(function (elem) {
+                elem.classList.remove('visible')
+            })
+
+            data -= 1;
+            if (data < 1) {
+                data = 8;
+            }
+            document.querySelector(`.js-bigPic[data="${data}"]`).classList.add('active');
+            document.querySelector(`.js-ltlPic[data="${data}"]`).classList.add('visible');
+        }
+    }
 
 
-let showModal = document.querySelector('.js-showModal');
-showModal.onclick = function (event) {
-    event.preventDefault();
-    document.querySelector('.modal').classList.add('showModal')
-    document.querySelector('.modal__content').classList.add('showModal-content')
+
 }
+
+if (document.querySelector('.review__slider') != null) {
+    new Swiper('.review__slider', {
+        grabCursor: true,
+        mousewheel: {
+            sensitivity: 1,
+            eventsTarget: ".review__slider"
+        },
+
+        // autoHeight: true,
+        slidesPerView: 5,
+        // centeredSlides: true,
+        loop: true,
+
+        breakpoints: {
+            375: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            998: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 5,
+            }
+        },
+        spaceBetween: 15,
+    });
+}
+
+if (document.querySelector('.massmedia__slider') != null) {
+    new Swiper('.massmedia__slider', {
+        grabCursor: true,
+        mousewheel: {
+            sensitivity: 1,
+            eventsTarget: ".massmedia__slider"
+        },
+
+        // autoHeight: true,
+        slidesPerView: 4,
+        // centeredSlides: true,
+        loop: true,
+
+        breakpoints: {
+            375: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            998: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            }
+        },
+        spaceBetween: 15,
+    });
+}
+
+
+
+
+
+
 
 let closeModal = document.querySelector('.js-modalClose');
 closeModal.onclick = function () {
@@ -212,5 +255,16 @@ closeModale.onclick = function () {
 }
 
 
+let showModal = document.querySelector('.js-showModal');
+showModal.onclick = ShowModal;
+// let showModale = document.querySelector('.js-showModale');
+// showModale.onclick = console.log(111);
+function ShowModal(event) {
+    event.preventDefault();
+    document.querySelector('.modal').classList.add('showModal')
+    document.querySelector('.modal__content').classList.add('showModal-content')
+}
 
-
+if (document.querySelector('.js-aboutus') != null) {
+    document.querySelector('.js-aboutusLink').classList.add('active-link');
+}

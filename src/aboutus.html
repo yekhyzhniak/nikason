@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/headAboutUs.html', {
+'title': 'Главная'
+})
+
+<body>
+    <div class="wrapper js-aboutus">
+        @@include('html/header.html', {})
+        <main class="page">
+            <section class="section">
+                <div class="container">
+                    <div class="history">
+                        <div class="history__content">
+                            <div class="history__title title">История создания мастерской NIKASON BRAND</div>
+                            <div class="history__pic">
+                                <img src="./images/history-photo.jpg" alt="history-photo"
+                                    class="history__pic-img"></img>
+                            </div>
+                            <div class="history__row">
+                                <div class="history__item">
+                                    <div class="history__item-title title">+10 лет</div>
+                                    <div class="history__item-text text">На рынке по производству мебели</div>
+                                </div>
+
+                                <div class="history__item">
+                                    <div class="history__item-title title">+1500</div>
+                                    <div class="history__item-text text">Изготовлено мебели</div>
+                                </div>
+
+                                <div class="history__item">
+                                    <div class="history__item-title title">120 лет</div>
+                                    <div class="history__item-text text">Самой старинной мебели для реставрации </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="founder">
+                        <div class="founder__content">
+                            <div class="founder__photo">
+                                <img src="./images/founder-photo.jpg" alt="founder-photo" class="founder__photo-pic">
+                            </div>
+                            <div class="founder__dscr">
+                                <div class="founder__dscr-title subtitle">Никита Колодезников-Матчитов</div>
+                                <div class="founder__dscr-subtitle text">Основатель мастерской</div>
+                                <div class="founder__dscr-text text">С детства я был окружен творческими людьми, мой
+                                    дедушка был строителем и мастером по дереву. Спустя много лет и мне передалась его
+                                    любовь к дереву - в свободное время мастерил для себя небольшие изделия из
+                                    древесины.</div>
+                                <div class="founder__dscr-text text">Более десяти лет назад построил двухэтажный гараж,
+                                    на втором этаже расположилась наша мастерская. Начинал производство практически “с
+                                    нуля”, с каждой зарплаты понемногу откладывал на покупку инстурментов и станков.
+                                </div>
+                                <div class="founder__dscr-text text">Постепенно начали появляться первые заказы.
+                                    Несколько лет назад мы с супругой решили еще заняться ремонтом и реставрацией
+                                    мебели. Эту идею предложили сами клиенты, поскольку периодически приходили с таким
+                                    запросом. В основном, реставрацией занимается супруга Саргылана. Мы с ней одна
+                                    сплоченная, дружная и отличная команда. </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="philosofi">
+                        <div class="philosofi__content">
+                            <div class="philosofi__title title">Философия мастерской NIKASON</div>
+                            <div class="philosofi__subtitle subtitle">Создавать что-то по-настоящему ценное и
+                                уникальное. Дарить радость и уют в каждый дом</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="massmedia">
+                        <div class="massmedia__content">
+                            <div class="massmedia__title title">СМИ о нас</div>
+                            <div class="massmedia__subtitle text">О нашей мастерской пишут многие издания Якутии</div>
+                            <div class="massmedia__slider swiper-container">
+                                <div class="review__slider-container swiper-wrapper">
+                                    <div class="review__slide swiper-slide">
+                                        <img src="./images/massmedia1.jpg" alt="slide-pic" class="review__slide-pic">
+                                    </div>
+                                    <div class="review__slide swiper-slide">
+                                        <img src="./images/massmedia2.jpg" alt="slide-pic" class="review__slide-pic">
+                                    </div>
+                                    <div class="review__slide swiper-slide">
+                                        <img src="./images/massmedia3.jpg" alt="slide-pic" class="review__slide-pic">
+                                    </div>
+                                    <div class="review__slide swiper-slide">
+                                        <img src="./images/massmedia4.jpg" alt="slide-pic" class="review__slide-pic">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="feedback">
+                        <div class="feedback__content">
+                            <div class="feedback__title title">Оставьте заявку и мы с вами свяжемся</div>
+                            <div class="feedback__btn">
+                                <a href="#" class="feedback__btn-link btn-green js-showModal">Оставить заявку</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    </div>
+    <div class="modal">
+        <div class="modal__bg">
+        </div>
+        <div class="modal__content">
+            <div class="modal__close js-modalClose">x</div>
+            <div class="modal__content-right">
+                <a href="#" class="modal__link">
+                    <svg class="modal__link-pic color-blck">
+                        <use xlink:href="./images/icons/icons.svg#instagram-brown"></use>'svg'
+                    </svg>
+                </a>
+                <a href="#" class="modal__link">
+                    <svg class="modal__link-pic color-blck">
+                        <use xlink:href="./images/icons/icons.svg#telegram-brown"></use>'svg'
+                    </svg>
+                </a>
+                <a href="#" class="modal__link">
+                    <svg class="modal__link-pic color-blck">
+                        <use xlink:href="./images/icons/icons.svg#whatsup-brown"></use>'svg'
+                    </svg>
+                </a>
+            </div>
+            <div class="modal__content-left">
+                <div class="modal__title subtitle">Оставьте ваши контактные данные для обратной связи</div>
+                <div class="modal__text text">Если у вас есть какие-либо вопросы или предложения по
+                    сотрудничесту -
+                    заполние форму ниже</div>
+                <form action="#">
+                    <div class="modal__input">
+                        <input class="modal__input-box" type="text" placeholder="Ваше имя" />
+                    </div>
+                    <div class="modal__input">
+                        <input class="modal__input-box" type="text" placeholder="Введите email" />
+                    </div>
+                    <div class="modal__input">
+                        <input class="modal__input-box" type="text" placeholder="Введите телефон" />
+                    </div>
+                    <div class="modal__input message-box">
+                        <textarea class="modal__input-box modal__input-textarea" placeholder="Сообщение"></textarea>
+                    </div>
+                    <div class="modal__button">
+                        <a href="#" class="modal__button-link btn-green">Отправить</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @@include('html/footer.html', {})
+    </div>
+    @@include('html/script.html', {})
+</body>
+
+</html>

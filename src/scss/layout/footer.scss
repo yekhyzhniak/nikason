@@ -2,17 +2,7 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 1440px;
     background: #715B4B;
-    @include m-tablet-wide{
-        width: 1024px;
-    }
-    @include m-tablet{
-        width: 768px;
-    }
-    @include m-phone{
-        width: 375px;
-    }
     &__container{
         position: relative;
         padding: 84px 0 250px 0;
@@ -123,17 +113,23 @@
         }
     }
     &__link{
+        width: 52px;
+        height: 52px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
         &-pic{
-            width: 52px;
-            height: 52px;
-            color: #fff;
+            width: 24px;
+            height: 24px;
+            
             transition: 0.4s;
-        }
-        &-pic:hover{
-            transform: scale(1.2);
         }
     }
     &__link:hover{
         text-decoration: underline;
+        transform: scale(1.2);
     }
 }

@@ -110,7 +110,8 @@
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        border: 1px solid black;
+        border: 2px solid #715B4B;
+        color: #715B4B;
         background: #fff;
         top: 40px;
         right: 40px;
@@ -124,6 +125,23 @@
         @include m-phone{
             top: 20px;
             right: 20px;
+        }
+    }
+    &__link{
+        width: 52px;
+        height: 52px;
+        border: 2px solid #715B4B;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        &-pic{
+            width: 24px;
+            height: 24px;
+        }
+        &:hover{
+            transform: scale(1.2);
         }
     }
 }
