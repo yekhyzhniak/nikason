@@ -241,29 +241,31 @@ if (document.querySelector('.massmedia__slider') != null) {
 
 
 
+if (document.querySelector('.js-showModal') != null) {
+    let closeModal = document.querySelector('.js-modalClose');
+    closeModal.onclick = function () {
+        document.querySelector('.modal').classList.remove('showModal')
+        document.querySelector('.modal__content').classList.remove('showModal-content')
+    }
 
-let closeModal = document.querySelector('.js-modalClose');
-closeModal.onclick = function () {
-    document.querySelector('.modal').classList.remove('showModal')
-    document.querySelector('.modal__content').classList.remove('showModal-content')
+    let closeModale = document.querySelector('.modal__bg');
+    closeModale.onclick = function () {
+        document.querySelector('.modal').classList.remove('showModal')
+        document.querySelector('.modal__content').classList.remove('showModal-content')
+    }
+
+
+    let showModal = document.querySelector('.js-showModal');
+    showModal.onclick = ShowModal;
+    // let showModale = document.querySelector('.js-showModale');
+    // showModale.onclick = console.log(111);
+    function ShowModal(event) {
+        event.preventDefault();
+        document.querySelector('.modal').classList.add('showModal')
+        document.querySelector('.modal__content').classList.add('showModal-content')
+    }
 }
 
-let closeModale = document.querySelector('.modal__bg');
-closeModale.onclick = function () {
-    document.querySelector('.modal').classList.remove('showModal')
-    document.querySelector('.modal__content').classList.remove('showModal-content')
-}
-
-
-let showModal = document.querySelector('.js-showModal');
-showModal.onclick = ShowModal;
-// let showModale = document.querySelector('.js-showModale');
-// showModale.onclick = console.log(111);
-function ShowModal(event) {
-    event.preventDefault();
-    document.querySelector('.modal').classList.add('showModal')
-    document.querySelector('.modal__content').classList.add('showModal-content')
-}
 
 if (document.querySelector('.js-aboutus') != null) {
     document.querySelector('.js-aboutusLink').classList.add('active-link');

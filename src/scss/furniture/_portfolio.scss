@@ -40,10 +40,11 @@
         margin-bottom: 10px;
         @include m-tablet{
             width: 700px;
-            height: auto;
+            height: 700px;
         }
         @include m-phone{
             width: 330px;
+            height: 240px;
         }
         &-pic{
             width: 100%;

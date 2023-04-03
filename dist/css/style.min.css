@@ -332,7 +332,7 @@ body.lock {
 @media (max-width: 767px) {
   .header__list {
     flex-direction: column;
-    width: 130px;
+    width: 270px;
   }
 }
 @media (max-width: 767px) {
@@ -2202,12 +2202,13 @@ body.lock {
 @media (max-width: 1023px) {
   .portfolio__gallery {
     width: 700px;
-    height: auto;
+    height: 700px;
   }
 }
 @media (max-width: 767px) {
   .portfolio__gallery {
     width: 330px;
+    height: 240px;
   }
 }
 .portfolio__gallery-pic {

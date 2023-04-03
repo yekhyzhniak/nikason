@@ -47,7 +47,7 @@
         }
         @include m-phone{
             flex-direction: column;
-            width: 130px;
+            width: 270px;
         }
         &-item{}
         &-item:not(:last-child){
