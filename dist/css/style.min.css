@@ -477,7 +477,7 @@ body.lock {
 .active-link {
   color: #57463A;
   border-bottom: 2px solid #57463A;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .passive-link {

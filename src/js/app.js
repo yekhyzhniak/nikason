@@ -124,54 +124,54 @@ if (document.querySelector('.js-furniture') != null) {
         })
         document.querySelector(`.js-bigPic[data="${data}"]`).classList.add('active');
         document.querySelector(`.js-ltlPic[data="${data}"]`).classList.add('visible');
+    }
 
-        let moveRight = document.querySelector('.js-Right');
-        moveRight.onclick = function (event) {
-            event.preventDefault();
-            let data = Number(document.querySelector('.active').getAttribute('data'));
+    let moveRightBtn = document.querySelector('.js-Right');
+    moveRightBtn.onclick = moveRight;
+    function moveRight(event) {
+        event.preventDefault();
+        let data = Number(document.querySelector('.active').getAttribute('data'));
 
-            let bigPic = document.querySelectorAll('.js-bigPic')
-            bigPic.forEach(function (elem) {
-                elem.classList.remove('active')
-            });
-            let thumb = document.querySelectorAll('.js-ltlPic');
-            thumb.forEach(function (elem) {
-                elem.classList.remove('visible')
-            })
+        let bigPic = document.querySelectorAll('.js-bigPic')
+        bigPic.forEach(function (elem) {
+            elem.classList.remove('active')
+        });
+        let thumb = document.querySelectorAll('.js-ltlPic');
+        thumb.forEach(function (elem) {
+            elem.classList.remove('visible')
+        })
 
-            data += 1;
-            if (data > 8) {
-                data = 1;
-            }
-            document.querySelector(`.js-bigPic[data="${data}"]`).classList.add('active');
-            document.querySelector(`.js-ltlPic[data="${data}"]`).classList.add('visible');
+        data += 1;
+        if (data > 8) {
+            data = 1;
         }
-
-        let moveLeft = document.querySelector('.js-Left');
-        moveLeft.onclick = function (event) {
-            event.preventDefault();
-            let data = Number(document.querySelector('.active').getAttribute('data'));
-
-            let bigPic = document.querySelectorAll('.js-bigPic')
-            bigPic.forEach(function (elem) {
-                elem.classList.remove('active')
-            });
-            let thumb = document.querySelectorAll('.js-ltlPic');
-            thumb.forEach(function (elem) {
-                elem.classList.remove('visible')
-            })
-
-            data -= 1;
-            if (data < 1) {
-                data = 8;
-            }
-            document.querySelector(`.js-bigPic[data="${data}"]`).classList.add('active');
-            document.querySelector(`.js-ltlPic[data="${data}"]`).classList.add('visible');
-        }
+        document.querySelector(`.js-bigPic[data="${data}"]`).classList.add('active');
+        document.querySelector(`.js-ltlPic[data="${data}"]`).classList.add('visible');
     }
 
 
+    let moveLeftBtn = document.querySelector('.js-Left');
+    moveLeftBtn.onclick = moveLeft;
+    function moveLeft(event) {
+        event.preventDefault();
+        let data = Number(document.querySelector('.active').getAttribute('data'));
 
+        let bigPic = document.querySelectorAll('.js-bigPic')
+        bigPic.forEach(function (elem) {
+            elem.classList.remove('active')
+        });
+        let thumb = document.querySelectorAll('.js-ltlPic');
+        thumb.forEach(function (elem) {
+            elem.classList.remove('visible')
+        })
+
+        data -= 1;
+        if (data < 1) {
+            data = 8;
+        }
+        document.querySelector(`.js-bigPic[data="${data}"]`).classList.add('active');
+        document.querySelector(`.js-ltlPic[data="${data}"]`).classList.add('visible');
+    }
 }
 
 if (document.querySelector('.review__slider') != null) {
